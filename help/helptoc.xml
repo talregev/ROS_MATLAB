@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<toc version="2.0">
+<!-- First tocitem specifies top level in Help browser Contents pane -->
+<!-- This can be a roadmap page, as shown below, or a content page -->
+    
+
+   <tocitem image="$toolbox/matlab/icons/book_mat.gif" target="product_page.html">ROS I/O Package<tocitem image="HelpIcon.USER_GUIDE" target="getting_started_guide.html">Users Guide</tocitem>
+      <tocitem image="$toolbox/matlab/icons/pdficon.gif" target="getting_started_guide.pdf">Printable Documentation (PDF)</tocitem>
+   </tocitem>
+</toc>
