@@ -1,4 +1,4 @@
-# ROSIO
+# ROS_Matlab
 ROSIO Packeage For sent and receive ROS messages inside Matlab.
 
 [Wiki](http://wiki.ros.org/rosio)
