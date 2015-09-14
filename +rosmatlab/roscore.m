@@ -52,14 +52,21 @@ classdef roscore < handle
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         function core = roscore(varargin)
             try
-                if nargin == 1
+                if nargin == 2
+                    port = varargin{2};
+                    host = varargin{1};
+                elseif nargin == 1
                     port = varargin{1};
                 elseif nargin == 0
                     port = 11311;
                 else
                     error('Incorrect use of the constructor for rosmatlab.roscore.')
                 end
-                rosMaster = org.ros.RosCore.newPublic(port);
+                if nargin == 2
+                    rosMaster = org.ros.RosCore.newPublic(host,port);
+                else
+                    rosMaster = org.ros.RosCore.newPublic(port);
+                end
                 rosMaster.start();
                 rosMaster.awaitStart();
             catch exception
