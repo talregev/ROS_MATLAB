@@ -1,6 +1,7 @@
 %% Load a bag, build a TF tree using it, and see what frames exist
-home = getenv('HOME');
-path = strcat(home, '/MATLAB/toolbox/psp/rosmatlab/example/example.bag');
+
+Root = fileparts(mfilename('fullpath'));
+path = [Root filesep 'example.bag'];
 bag = ros.Bag.load(path);
 tree = ros.TFTree(bag);
 

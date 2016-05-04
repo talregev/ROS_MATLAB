@@ -7,11 +7,12 @@ clear all
 
 %from https://github.com/bcharrow/matlab_rosbag
 %from https://github.com/bcharrow/matlab_rosbag/releases
+%from https://github.com/ibadr/matlab_rosbag/releases/
 
-home = getenv('HOME');
-path = strcat(home, '/MATLAB/toolbox/psp/rosmatlab/example/example.bag');
+Root = fileparts(mfilename('fullpath'));
+path = [Root filesep 'example.bag'];
 bag = ros.Bag.load(path);
-bag.info()
+% bag.info()
 
 %% Read all messages on a few topics
 topic1 = '/turtle1/cmd_vel';
