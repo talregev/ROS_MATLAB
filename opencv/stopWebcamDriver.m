@@ -1,10 +1,6 @@
-clearJava = false;
-if exist('grabber')
-    clearJava = true;
+if exist('grabber')    
     grabber.stop();
-end
-clear import;
-if clearJava
     clear java;
 end
+clear import;   
 clearvars;
