@@ -8,13 +8,13 @@ import org.ros.internal.message.*;
 
 
 % Flags
-Flags.isCompressed = false;
+Flags.isCompressed = true;
 
 grabber = FrameGrabber.createDefault(0);
 grabber.start();
 
 % enable it if you want matlab will start the roscore.
-roscore = rosmatlab.roscore('10.0.0.7',11311);
+roscore = rosmatlab.roscore('192.168.14.119',11311);
 
 % Create a new node named /NODE and connect it to the master.
 % if you enable matlab roscore, please put this in the second arrgument:
