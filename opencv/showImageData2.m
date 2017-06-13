@@ -42,7 +42,7 @@ function showImageData2(message)
     I = convertFromRGBRawImageData(data,w,h);
 
     if isempty(videoPlayer)
-        videoPlayer = vision.VideoPlayer('Name','Raw 1');
+        videoPlayer = vision.VideoPlayer('Name','Raw 2');
     end
     step(videoPlayer,I);
 end
